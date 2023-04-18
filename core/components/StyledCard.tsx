@@ -1,5 +1,4 @@
 import React from "react";
-import Card from "./Card";
 
 export default function StyledCard({ children }: { children?: React.ReactNode }) {
   return (
