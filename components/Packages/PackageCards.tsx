@@ -1,5 +1,5 @@
-import Button from "@/core/components/Button";
-import StyledCard from "@/core/components/StyledCard";
+import Button from "@/core/components/Button/Button";
+import StyledCard from "@/core/components/Card/StyledCard";
 import { Chivo_Mono, Chivo } from "next/font/google";
 import React from "react";
 const chivo_mono = Chivo_Mono({ subsets: ["latin"] });
