@@ -8,9 +8,7 @@ const chivo_mono = Chivo_Mono({ subsets: ["latin"] });
 export default function InitialSection() {
   const [isTyping, setIsTyping] = React.useState(true);
   const router = useRouter();
-  function navigatePackages() {
-    router.push("/overviewPackages/packages");
-  }
+
   return (
     <div className="bg-white">
       <div className="px-6 py-24 sm:px-6 sm:py-32 lg:px-8">
@@ -48,7 +46,13 @@ export default function InitialSection() {
             goals.
           </p>
           <div className="flex items-center justify-center mt-10 gap-x-6">
-            <StyledButton onClick={navigatePackages}>Get Started</StyledButton>
+            <StyledButton
+              onClick={() => {
+                router.push("/investmentPackages/overview");
+              }}
+            >
+              Get Started
+            </StyledButton>
             <a
               href="#"
               className="text-sm font-semibold leading-6 text-gray-900 hover:underline group"
