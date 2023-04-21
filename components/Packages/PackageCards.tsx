@@ -46,33 +46,35 @@ const investmentPackages = [
 
 export default function PackageCards() {
   return (
-    <div className="flex flex-row justify-center w-full gap-10 p-4 text-center">
+    <div className="flex flex-col justify-center w-full grid-cols-3 gap-10 p-4 text-center md:flex-row">
       {investmentPackages.map((investment_package) => (
-        <StyledCard key={investment_package.id}>
-          <div className="flex flex-col items-stretch justify-between gap-5">
-            {/* Title */}
-            <h1 className={`${chivo_mono.className} text-xl font-bold`}>
-              {investment_package.name}
-            </h1>
-            {/* Subtitle */}
-            <h2 className={`${chivo_mono.className} text-base font-light`}>
-              {investment_package.riskLevel}
-            </h2>
-            {/* Description */}
-            <p className={`${chivo.className} text-left mt-3 font-light`}>
-              {investment_package.description}
-            </p>
-            {/* Key Features */}
-            <ul className="mt-3 text-left">
-              {investment_package.keyFeatures.map((feature) => (
-                <li key={feature} className={`${chivo_mono.className}`}>
-                  • {feature}
-                </li>
-              ))}
-            </ul>
-            <Button className="mt-3">Learn More</Button>
-          </div>
-        </StyledCard>
+        <div key={investment_package.id} className="col-span-3 md:col-span-1">
+          <StyledCard>
+            <div className="flex flex-col items-stretch justify-between">
+              {/* Title */}
+              <h1 className={`${chivo_mono.className} text-xl font-bold`}>
+                {investment_package.name}
+              </h1>
+              {/* Subtitle */}
+              <h2 className={`${chivo_mono.className} text-base font-light`}>
+                {investment_package.riskLevel}
+              </h2>
+              {/* Description */}
+              <p className={`${chivo.className} text-left mt-3 font-light`}>
+                {investment_package.description}
+              </p>
+              {/* Key Features */}
+              <ul className="mt-3 text-left">
+                {investment_package.keyFeatures.map((feature) => (
+                  <li key={feature} className={`${chivo_mono.className}`}>
+                    • {feature}
+                  </li>
+                ))}
+              </ul>
+              <Button className="mt-3">Learn More</Button>
+            </div>
+          </StyledCard>
+        </div>
       ))}
     </div>
   );
