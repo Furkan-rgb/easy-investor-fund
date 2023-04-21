@@ -55,7 +55,7 @@ export default function Navbar() {
                       router.pathname === "/"
                         ? "border-slate-500 text-gray-900"
                         : "border-transparent text-gray-500"
-                    } transition-transform inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-500  hover:border-gray-300 hover:text-gray-700`}
+                    } transition-transform inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-500  hover:border-gray-300 hover:text-gray-700 border-b-2`}
                   >
                     Home
                   </Link>
