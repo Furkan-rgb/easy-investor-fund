@@ -12,7 +12,7 @@ export default function PackageCards({
   investmentPackage: any;
 }) {
   const ref = useRef(null);
-  const isInView = useInView(ref, { amount: "all" });
+  const isInView = useInView(ref, { amount: "all", margin: "0px" });
   useEffect(() => {
     console.log("Element is in view: ", isInView);
   }, [isInView]);
