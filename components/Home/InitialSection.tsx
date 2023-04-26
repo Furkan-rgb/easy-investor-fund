@@ -1,5 +1,6 @@
 import StyledButton from "@/core/components/Button/StyledButton";
 import { Chivo_Mono } from "next/font/google";
+import Link from "next/link";
 import { useRouter } from "next/router";
 import React from "react";
 import Typewriter from "typewriter-effect";
@@ -41,9 +42,9 @@ export default function InitialSection() {
             Join Our Investment Platform Today.
           </h2>
           <p className="max-w-xl mx-auto mt-6 text-lg leading-8 text-gray-600">
-            Embark on a rewarding and secure journey into the world of cryptocurrencies with our
-            expertly curated investment packages tailored to diverse risk preferences and financial
-            goals.
+            Embark on a rewarding and secure journey into the world of
+            cryptocurrencies with our expertly curated investment packages
+            tailored to diverse risk preferences and financial goals.
           </p>
           <div className="flex items-center justify-center mt-10 gap-x-6">
             <StyledButton
@@ -53,8 +54,8 @@ export default function InitialSection() {
             >
               Get Started
             </StyledButton>
-            <a
-              href="#"
+            <Link
+              href="/investmentPackages/overview"
               className="text-sm font-semibold leading-6 text-gray-900 hover:underline group"
             >
               Explore packages{" "}
@@ -64,7 +65,7 @@ export default function InitialSection() {
               >
                 →
               </span>
-            </a>
+            </Link>
           </div>
         </div>
       </div>
