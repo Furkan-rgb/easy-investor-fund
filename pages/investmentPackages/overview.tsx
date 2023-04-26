@@ -41,13 +41,12 @@ const investmentPackages = [
 
 export default function Overview() {
   return (
-    <>
+    <div className="grid grid-cols-3">
       {investmentPackages.map((investmentPackage: any) => (
-        <PackageCards
-          key={investmentPackage}
-          investmentPackage={investmentPackage}
-        />
+        <div key={investmentPackage} className="col-span-3 sm:col-span-1">
+          <PackageCards investmentPackage={investmentPackage} />
+        </div>
       ))}
-    </>
+    </div>
   );
 }
